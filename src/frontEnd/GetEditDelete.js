@@ -1,8 +1,7 @@
 import React, {useEffect, useState,useRef} from 'react'
 import axios from 'axios';
 import TextField from '@mui/material/TextField';
-
-
+import { Link } from 'react-router-dom';
 
 export default function Add() {
     const [posts, setPosts] = useState([])
@@ -56,6 +55,8 @@ useEffect(() => {
 
 return (
         <div className='container'>
+            <div className='navbar'>
+            </div>
             <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
                 <form action="">
                 <div className='postDiv'>
@@ -85,7 +86,10 @@ return (
                         </div>)}
                 </div>)})}
                 <div className='Edit'>
-                    {!!posts.length && <button  className='create' onClick={() => onUpdate(posts._id)}>Edit</button>}
+                    {!!posts.length && <button  className='edit' onClick={() => onUpdate(posts._id)}>Edit</button>}
+                    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true'/>
+                    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet"></link>
                 </div>
             </div>    
         </div>
