@@ -52,3 +52,24 @@
   background-color: rgb(196, 194, 193);
   color: rgb(17, 17, 17);
 } 
+
+@media screen and (max-width: 600px) {
+  .App {
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    background: url(https://thumbs.dreamstime.com/z/pen-old-paper-930885.jpg) no-repeat center center fixed; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .postDiv{
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 1000;
+    font-size: 15px;
+    justify-content:center;
+  }
+}
