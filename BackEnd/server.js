@@ -2,7 +2,9 @@ const express = require('express')
 const MongoClient = require('mongodb').MongoClient
 const cors = require('cors')
 const ObjectID = require('mongodb').ObjectID;
+const dotenv = require('dotenv').config()
 
+console.log(dotenv.parsed)
 const app = express()
 app.use(cors());
 
@@ -15,7 +17,6 @@ app.get('/crud',(req, resp) => {
     .toArray((err,result) => {
         if(err) throw err
         resp.send(result)
-        console.log(result)
     })
 })
 
@@ -46,9 +47,8 @@ app.put('/crud/:id', (req, res) => {
     });
 });
 
-
-app.listen(4000, () => {
-    MongoClient.connect('mongodb+srv://Albert:eBwAGrcgBYbFdJDK@crud.gpsxdjg.mongodb.net/test?authMechanism=SCRAM-SHA-1', {useNewUrlParser: true}, (err, result) => {
+app.listen(process.env.PORT, () => {
+    MongoClient.connect(process.env.MONGODB_URI, {useNewUrlParser: true}, (err, result) => {
         if(err) throw err
         database = result.db('crud')
         console.log("connected")
