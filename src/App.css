@@ -1,11 +1,7 @@
 .container {
-  text-align: center;
   height: 100vh;
   width: 100vw;
   background: url(https://previews.123rf.com/images/ke77kz/ke77kz1612/ke77kz161200017/67762428-vintage-paper-background-for-the-design-natural-old-paper-texture-.jpg) no-repeat center center fixed; 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .navbar {
@@ -16,6 +12,7 @@
   background-color: rgba(216, 192, 86, 0.781);
 }
 .router {
+  margin-left: 50px;
   float: left;
   font-size: 16px;
   color: white;
@@ -24,15 +21,13 @@
   text-decoration: none;
 }
 
-.person {
-  font-family: 'Dancing Script', cursive;
-  font-size: 35px;
-}
-
 .postDiv{
+  width: 100vw;
   font-family: 'Dancing Script', cursive;
   font-weight: 1000;
   font-size: 25px;
+  display: flex;
+  justify-content: center;
 }
 
 .create {
@@ -45,29 +40,26 @@
   font-weight: 500;
   background-color: rgb(196, 194, 193);
   color: rgb(17, 17, 17);
-  margin-right: 240px;
 }
 
-.editDiv{
+.dataDiv {
   display: flex;
-  margin-top: 80px;
-  font-family: 'Dancing Script', cursive;
-  font-weight: 1000;
-  font-size: 25px;
-  justify-content:end;
-  
+  width: 100vw;
+  height: 200px; 
+  flex-direction: column;
 }
 
-.edit {
-  margin-top: 5px;
-  height: 30px;
-  width: 80px;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 15px;
-  font-weight: 500;
-  background-color: rgb(196, 194, 193);
-  color: rgb(17, 17, 17);
+.childdataDiv {
+  display: flex;
+  width: 100vw;
+  height: 180px;
+  flex-direction: column; 
+  align-items: center;
+}
+
+.person {
+  font-family: 'Dancing Script', cursive;
+  font-size: 35px;
 }
 
 .delete {
@@ -81,23 +73,52 @@
   color: rgb(17, 17, 17);
 } 
 
-@media screen and (max-width: 600px) {
-  .container {
-    text-align: center;
-    height: 100vh;
-    width: 100%;
-    background: url(https://thumbs.dreamstime.com/z/pen-old-paper-930885.jpg) no-repeat center center fixed; 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
+.editDiv{
+  width: 100vw;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 1000;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+}
 
-  .postDiv{
-    display: flex;
-    align-items: flex-end;
-    font-family: 'Dancing Script', cursive;
-    font-weight: 1000;
-    font-size: 15px;
-    justify-content:center;
-  }
+.EditDiv1 {
+  display: flex;
+  width: 100vw;
+  height: 30px;
+  justify-content: center;
+}
+
+.edit {
+  height: 30px;
+  width: 80px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: rgb(196, 194, 193);
+  color: rgb(17, 17, 17);
+}
+
+.home {
+  height: 100vh;
+  width: 100vw;
+  background: url(https://www.godwallpaper.in/downloading.aspx?pcod=WP0001430) no-repeat center center fixed; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
+
+.add {
+  display: flex;
+  height: 75vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.gototext{
+  color: rgb(223, 223, 223);
+  text-decoration: none;
 }
