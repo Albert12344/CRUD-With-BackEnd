@@ -2,6 +2,9 @@
   height: 100vh;
   width: 100vw;
   background: url(https://previews.123rf.com/images/ke77kz/ke77kz1612/ke77kz161200017/67762428-vintage-paper-background-for-the-design-natural-old-paper-texture-.jpg) no-repeat center center fixed; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .navbar {
