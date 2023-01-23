@@ -14,19 +14,19 @@ export default function Add() {
 
 
 const submitValue = () => {
-    axios.post('http://localhost:4000/crud', {
+    axios.post('https://backenddeploytesting.herokuapp.com/crud', {
         firstName: value,
         lastName: value1,
     })
 }
 
 const onDelete = (_id) => {
-    axios.delete(`http://localhost:4000/crud/${_id}`)
+    axios.delete(`https://backenddeploytesting.herokuapp.com/crud/${_id}`)
 }
 
 const onUpdate = (_id) => {
     if(posts._id !== posts._id) {
-        axios.put(`http://localhost:4000/crud/${_id}`, {
+        axios.put(`https://backenddeploytesting.herokuapp.com/crud/${_id}`, {
             firstName: value,
             lastName: value1
         })
@@ -36,7 +36,7 @@ const onUpdate = (_id) => {
 
 const onUpdate1 = (_id) => {
     if(value, value1 !== value3, value4) {
-        axios.put(`http://localhost:4000/crud/${_id}`, {
+        axios.put(`https://backenddeploytesting.herokuapp.com/crud/${_id}`, {
             firstName: value3,
             lastName: value4
         })
@@ -46,7 +46,7 @@ const onUpdate1 = (_id) => {
 
 
 useEffect(() => {
-    axios.get('http://localhost:4000/crud')
+    axios.get('https://backenddeploytesting.herokuapp.com/crud')
     .then(res => {
     setPosts(res.data)
     })
